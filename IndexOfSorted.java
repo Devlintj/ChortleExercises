@@ -52,7 +52,7 @@ public class IndexOfSorted {
 	    int indexPlace = 0;
 	    int direction = 1;
 	    
-	    while (lengthSearch >= 1) {
+	    while (oneCheck <= 3) {
 
 	    	System.out.println(indexPlace + "   " + lengthSearch + "    " + direction);
 	      
@@ -68,9 +68,6 @@ public class IndexOfSorted {
 	    	lengthSearch = (lengthSearch /2) + 1;
 	    	if(lengthSearch == 1 || lengthSearch == 2) {
 	    		oneCheck++;
-	    	}
-	    	if(oneCheck == 3) {
-	    		return failure;
 	    	}
 	    }
 	    return failure;
