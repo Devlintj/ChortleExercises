@@ -7,6 +7,11 @@ public class Car {
 		gallons = gas;
 	}
 	
+	Car(int miles) {
+		startMile = 0;
+		endMile = miles;
+	}
+	
 	public double calculateMPG() {
 		double mpg = (endMile - startMile) / gallons;
 		return mpg;
@@ -26,5 +31,10 @@ public class Car {
 			return true;
 		}
 		return false;
+	}
+	public void fillUp(int miles, double gas) {
+		startMile = endMile + 0;
+		endMile+=miles;
+		gallons = gas;
 	}
 }
