@@ -17,8 +17,19 @@ public class Box {
 		return volume;
 	}
 	double area() {
-		double area = (width * length * 2) + (width * height * 2) + (height * length * 2);
-		return area;
+		return topArea() + sideArea() + faceArea();
+	}
+	
+	private double topArea() {
+		return height * length * 2;
+	}
+	
+	private double sideArea() {
+		return width * length * 2;
+	}
+	
+	private double faceArea() {
+		return width * height * 2;
 	}
 	
 	double length() {
