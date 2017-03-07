@@ -12,6 +12,12 @@ public class Box {
 		length = side;
 	}
 	
+	Box(Box oldBox) {
+		this.width = oldBox.width();
+		this.length = oldBox.length();
+		this.height = oldBox.height();
+	}
+	
 	double volume() {
 		double volume = width * height * length;
 		return volume;
@@ -32,15 +38,15 @@ public class Box {
 		return width * height * 2;
 	}
 	
-	double length() {
+	public double length() {
 		return length;
 	}
 	
-	double height() {
+	public double height() {
 		return height;
 	}
 	
-	double width() {
+	public double width() {
 		return width;
 	}
 }
